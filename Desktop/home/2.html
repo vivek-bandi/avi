@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .topnav {
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      background-color: #555;
+      padding: 10px;
+    }
+
+    .topnav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #e8e8e8;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    .topnav a:hover {
+      color: #fafafa;
+      background-color: #009688;
+    }
+
+    .bottom-footer {
+      font-size: 16px;
+      padding: 15px;
+      background-color: #222;
+      color: #f1f1f1;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .page-section {
+      padding: 80px 15px;
+      text-align: center;
+      font-size: 22px;
+      color: #444;
+    }
+
+    #intro { background-color: #f5f5f5; }
+    #details { background-color: #c8e6c9; }
+    #offers { background-color: #ffcc80; }
+    #reach { background-color: #ff7043; color: #fff; }
+
+    /* Time display */
+    .time-display {
+      font-size: 20px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="topnav">
+    <a href="#intro">Introduction</a>
+    <a href="#details">Details</a>
+    <a href="#offers">Offers</a>
+    <a href="#reach">Reach Out</a>
+  </div>
+
+
+  <div id="intro" class="page-section">
+    <h2>Greetings!</h2>
+    <p>Welcome to our unique platform, here to serve you.</p>
+  </div>
+  <div id="details" class="page-section">
+    <h2>Who We Are</h2>
+    <p>Our team is dedicated to excellence in service.</p>
+  </div>
+  <div id="offers" class="page-section">
+    <h2>What We Provide</h2>
+    <p>Discover a range of offerings designed to suit you.</p>
+  </div>
+  <div id="reach" class="page-section">
+    <h2>Get in Touch</h2>
+    <p>We’d love to hear from you. Contact us anytime!</p>
+  </div>
+
+
+  <div class="bottom-footer">
+    <p>&copy; 2024 Unique Platform | All Rights Reserved</p>
+    <div class="time-display" id="time-display"></div>
+  </div>
+
+
+  <script>
+    function showTime() {
+      const current = new Date();
+      const hrs = String(current.getHours()).padStart(2, '0');
+      const mins = String(current.getMinutes()).padStart(2, '0');
+      const secs = String(current.getSeconds()).padStart(2, '0');
+      document.getElementById('time-display').innerText = `Time Now: ${hrs}:${mins}:${secs}`;
+    }
+    setInterval(showTime, 1000);
+    showTime();
+  </script>
+</body>
+</html>
